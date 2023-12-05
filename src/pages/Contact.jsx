@@ -1,7 +1,10 @@
+import { MdLocationOn, MdMarkEmailRead } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+
 const Contact = () => {
   return (
-    <div className="fade-in-left flex h-screen w-full  justify-center gap-4  bg-sixth pt-16 text-first">
-      <section className="w-2/5 p-5">
+    <div className="fade-in-left -mt-56 flex h-screen w-full justify-center  gap-4 bg-sixth  pt-16 text-first lg:-mt-0">
+      <section className=" w-full p-5 lg:w-2/5">
         <h2 className="my-3 uppercase opacity-60">- Let's connect</h2>
         <h2 className="mb-1 text-2xl font-extrabold">Get in touch</h2>
         <p className="my-10 text-sm opacity-70">
@@ -12,22 +15,27 @@ const Contact = () => {
 
         <div className="border-l-4 border-fourth p-3 text-sm">
           <a
-            className="my-2 block hover:text-fourth"
-            href="tel:+254712345678p000"
+            className="my-2 flex items-center gap-2 hover:text-fourth"
+            href="tel:+254717694466p000"
           >
-            +254712345678
+            <FaPhoneAlt />
+            <p> Make a call</p>
           </a>
           <a
-            href="mailto:muciraerick.contact@gmail.com"
-            className="my-2 block hover:text-fourth"
+            href="mailto:muciraerick254@gmail.com"
+            className="my-2  flex items-center gap-2 hover:text-fourth"
           >
-            muciraerick.contact@gmail.com
+            <MdMarkEmailRead />
+            <p>Write an Email</p>
           </a>
-          <p>Nairobi, Kenya</p>
+          <p className="flex items-center gap-2">
+            <MdLocationOn />
+            Nairobi, Kenya
+          </p>
         </div>
       </section>
 
-      <div className="w-2/5 "></div>
+      <div className="w-0 lg:w-2/5"></div>
     </div>
   );
 };

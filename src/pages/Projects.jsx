@@ -1,111 +1,134 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Vimeo",
-      imageSrc: "./images/shoe1.jpg",
-      description: "Hotel Booking website",
+      title: "Portfolio",
+      imageSrc: "./images/v1.PNG",
+      description:
+        "Portfolio to show case completed and ongoing projects built with latest web technologies.",
+      url: "https://muciraerick.netlify.app",
+      tags: ["React.js", "JavaScript", "Tailwind"],
     },
     {
       id: 2,
-      title: "Amazon Clone",
-      imageSrc: "./images/shoe2.jpg",
+      title: "Evogym",
+      imageSrc: "./images/v2.PNG",
       description:
-        "E-commerce website for groceries shopping, furniture and electronics",
+        "Gym web app empowering individuals to achieve their fitness goals and lead a healthy lifestyle.",
+      url: "",
+      tags: ["React.js", "JavaScript", "Typescript", "Tailwind"],
     },
     {
       id: 3,
-      title: "Netflix clone",
-      imageSrc: "./images/shoe1.jpg",
-      description: "Streaming platform",
+      title: "Happymart",
+      imageSrc: "./images/v3.PNG",
+      description:
+        "Mobile friendly web app e-commerce platform built using react useContext and userReducer hook.",
+      url: "https://happymart.netlify.app/home",
+      tags: ["React.js", "JavaScript", "Tailwind"],
     },
-    {
-      id: 4,
-      title: "Twitter",
-      imageSrc: "./images/shoe2.jpg",
-      description: "Social media platform",
-    },
-    {
-      id: 5,
-      title: "Only fans",
-      imageSrc: "./images/shoe1.jpg",
-      description: "Content subscription platform",
-    },
-    // Add more projects as needed
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    const nextIndex = (currentIndex + 1) % projects.length;
-    if (nextIndex >= projects.length - 2) {
-      setCurrentIndex(projects.length - 3);
-    } else {
-      setCurrentIndex(nextIndex);
-    }
-  };
-
-  const handlePrev = () => {
-    const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
-    if (prevIndex <= projects.length - 3) {
-      setCurrentIndex(prevIndex);
-    }
-  };
-
   return (
-    <section className="fade-in-left h-screen w-full gap-4 bg-white text-first">
-      <div className="mx-auto w-3/4 pt-16">
-        <h2 className="py-3 uppercase opacity-60">- Projects</h2>
-        <div className="flex justify-between">
+    <section className="fade-in-left -mt-56 min-h-screen w-full gap-4 bg-white pb-16 text-first lg:-mt-0 lg:pb-0">
+      <div className="w-full  pb-10 lg:mx-auto lg:w-3/4 lg:pt-16">
+        <h2 className="px-4 py-3 uppercase opacity-60 lg:px-0">- Projects</h2>
+        <div className="mb-10 flex flex-col justify-between gap-4 px-4 lg:flex-row lg:gap-0 lg:px-0">
           <h2 className="mb-1 text-2xl font-extrabold">
             Recent completed works
           </h2>
           <div className="flex gap-2">
-            <div
-              className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-2 border-first hover:bg-first hover:text-white"
-              onClick={handlePrev}
-            >
+            <div className="custom-prev flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-2 border-first hover:bg-first hover:text-white">
               <MdOutlineKeyboardArrowLeft />
             </div>
-            <div
-              className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-2 border-first hover:bg-first hover:text-white"
-              onClick={handleNext}
-            >
+            <div className="custom-next flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-2 border-first hover:bg-first hover:text-white">
               <MdOutlineKeyboardArrowRight />
             </div>
           </div>
         </div>
-        {/* projects */}
-        <section className="custom-scrollbar mt-6 flex gap-4 overflow-x-auto px-2 py-5">
+
+        <Swiper
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          modules={[Navigation, Pagination, Scrollbar]}
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+          }}
+        >
           {projects.length === 0 ? (
             <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
               No projects available. Coming soon...
             </p>
           ) : (
-            projects.slice(currentIndex, currentIndex + 3).map((project) => (
-              <div key={project.id} className="fade-in-bottom w-1/3 p-4">
+            projects.map((project) => (
+              <SwiperSlide
+                key={project.id}
+                className="fade-in-bottom mx-4 w-11/12 flex-shrink-0 rounded-md border-2  border-fifth p-4 lg:mx-0 lg:max-w-xl"
+              >
                 <img
                   src={project.imageSrc}
                   alt={`project ${project.id}`}
-                  className="zoom-image h-64 w-56 cursor-pointer rounded-md"
+                  className="zoom-image h-72 w-full cursor-pointer rounded-xl border border-fifth object-contain lg:h-64"
                 />
-                <a href="#" className="anime my-4 inline-block">
+                <Link
+                  to={project.url}
+                  target="_blank"
+                  className="anime my-4 inline-block"
+                >
                   {project.title}
-                </a>
+                </Link>
                 <p className="text-sm opacity-60">{project.description}</p>
-              </div>
+
+                <div className="my-5 flex gap-2">
+                  {project.tags.map((tag, index) => (
+                    <p
+                      className="w-24 whitespace-nowrap rounded-3xl bg-first px-4 py-1.5 text-xs text-fifth"
+                      key={index}
+                    >
+                      {tag}
+                    </p>
+                  ))}
+                </div>
+              </SwiperSlide>
             ))
           )}
-        </section>
+        </Swiper>
+
         {projects.length > 0 ? (
-          <Link className="mx-auto mt-5 block w-52 rounded-md border border-transparent bg-first px-8 py-3 font-extralight text-white outline-none transition-all hover:border-first hover:bg-white hover:text-first">
+          <Link
+            className="mx-auto  mt-5 block w-52 rounded-md border border-transparent bg-first px-8 py-3 font-extralight text-white outline-none transition-all hover:border-first hover:bg-white hover:text-first"
+            to="https://github.com/rickie-ui"
+          >
             View all projects
           </Link>
         ) : null}
