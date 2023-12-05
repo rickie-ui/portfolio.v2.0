@@ -1,5 +1,6 @@
 <!-- TODO -->
 
+#### My latest portfolio  to showcase my personal projects
 ![Portfolio](https://github.com/rickie-ui/portfolio.v2.0/blob/main/public/images/v1.PNG)  
 
 ### starter kit
