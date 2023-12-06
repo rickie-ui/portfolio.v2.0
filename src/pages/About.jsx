@@ -13,7 +13,9 @@ const About = () => {
           <p className="mb-10 text-sm">Front-end Developer & Coder</p>
 
           <Link
-            to="#"
+            to="/documents/ErickMucira.pdf"
+            target="_blank"
+            rel="noreferrer"
             className="flex w-52 items-center justify-center gap-2 rounded-md border border-transparent bg-first px-8 py-3 font-extralight text-white outline-none transition-all hover:border-first hover:bg-white hover:text-first"
           >
             Download CV <IoDocumentTextOutline />

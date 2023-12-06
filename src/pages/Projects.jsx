@@ -29,7 +29,7 @@ const Projects = () => {
       imageSrc: "./images/v2.PNG",
       description:
         "Gym web app empowering individuals to achieve their fitness goals and lead a healthy lifestyle.",
-      url: "",
+      url: "https://evogym-86p.pages.dev",
       tags: ["React.js", "JavaScript", "Typescript", "Tailwind"],
     },
     {

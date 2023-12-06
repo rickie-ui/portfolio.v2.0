@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="portfolio" element={<Projects />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

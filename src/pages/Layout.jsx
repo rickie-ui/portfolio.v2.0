@@ -18,13 +18,8 @@ const Layout = () => {
     <div className="flex h-screen flex-col font-primary  lg:flex-row">
       {isMediumDevice ? (
         <aside className="fixed  hidden h-full w-full flex-col items-center justify-between  border-r py-6 lg:flex lg:w-1/5">
-          {/* <img
-            className="h-20 w-20 rounded-full border-2 border-third"
-            src="../../public/images/logo.png"
-            alt="logo"
-            /> */}
-
-          <h2 className="text-lg">Erick Mucira</h2>
+          {/* improvement in future, Logo? */}
+          <div></div>
 
           <nav className="flex w-full flex-col text-center text-sm  opacity-60">
             <Navbar to="/">Home</Navbar>
