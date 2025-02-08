@@ -16,15 +16,6 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Portfolio",
-      imageSrc: "./images/v1.PNG",
-      description:
-        "Portfolio to show case completed and ongoing projects built with latest web technologies.",
-      url: "https://muciraerick.netlify.app",
-      tags: ["React.js", "JavaScript", "Tailwind"],
-    },
-    {
-      id: 2,
       title: "Evogym",
       imageSrc: "./images/v2.PNG",
       description:
@@ -33,12 +24,39 @@ const Projects = () => {
       tags: ["React.js", "JavaScript", "Typescript", "Tailwind"],
     },
     {
+      id: 2,
+      title: "Magical Kenya",
+      imageSrc: "./images/v4.PNG",
+      description:
+        "Travel and tourism landing page showcasing the beauty of Kenya's wildlife and landscapes.",
+      url: "hhttps://magical-kenya.pages.dev",
+      tags: ["React.js", "JavaScript", "Tailwind"],
+    },
+    {
       id: 3,
-      title: "Happymart",
+      title: "Fashion",
       imageSrc: "./images/v3.PNG",
       description:
-        "Mobile friendly web app e-commerce platform built using react useContext and userReducer hook.",
-      url: "https://happymart.netlify.app/home",
+        "Fashion landing page built using react and tailwind css.",
+      url: "https://fashion-5kr.pages.dev",
+      tags: ["React.js", "JavaScript", "Tailwind"],
+    },
+    {
+      id: 4,
+      title: "D&S Associates",
+      imageSrc: "./images/v5.PNG",
+      description:
+        "Website for an accounting firm that offers accounting services to clients in Kenya.",
+      url: "https://ds-associates.pages.dev",
+      tags: ["React.js", "JavaScript", "Tailwind"],
+    },
+    {
+      id: 5,
+      title: "Portfolio",
+      imageSrc: "./images/v1.PNG",
+      description:
+        "Portfolio to show case completed and ongoing projects built with latest web technologies.",
+      url: "https://muciraerick.netlify.app",
       tags: ["React.js", "JavaScript", "Tailwind"],
     },
   ];
