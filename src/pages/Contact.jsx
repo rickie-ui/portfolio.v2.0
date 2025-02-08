@@ -9,8 +9,8 @@ const Contact = () => {
         <h2 className="mb-1 text-2xl font-extrabold">Get in touch</h2>
         <p className="my-10 text-sm opacity-70">
           I'm currently avaliable to take on new projects, so feel free to send
-          me a message about anything that you want to run past me. You can
-          contact anytime at 24/7
+          me a message about anything for a quick consult. You can
+          contact anytime.
         </p>
 
         <div className="border-l-4 border-fourth p-3 text-sm">

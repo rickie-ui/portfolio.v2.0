@@ -19,9 +19,9 @@ const Projects = () => {
       title: "Evogym",
       imageSrc: "./images/v2.PNG",
       description:
-        "Gym web app empowering individuals to achieve their fitness goals and lead a healthy lifestyle.",
+        "Web app empowering individuals to achieve their fitness goals and healthy lifestyle.",
       url: "https://evogym-86p.pages.dev",
-      tags: ["React.js", "JavaScript", "Typescript", "Tailwind"],
+      tags: ["React.js", "JavaScript", "Typescript"],
     },
     {
       id: 2,
