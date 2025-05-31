@@ -25,11 +25,11 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Magical Kenya",
-      imageSrc: "./images/v4.PNG",
+      title: "Charity Organization",
+      imageSrc: "https://gjoehandofhope.netlify.app/assets/charity-BKYlUzFk.jpg",
       description:
         "Travel and tourism landing page showcasing the beauty of Kenya's wildlife and landscapes.",
-      url: "hhttps://magical-kenya.pages.dev",
+      url: "https://gjoehandofhope.netlify.app/",
       tags: ["React.js", "JavaScript", "Tailwind"],
     },
     {
