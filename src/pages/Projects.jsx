@@ -26,9 +26,9 @@ const Projects = () => {
     {
       id: 2,
       title: "Charity Organization",
-      imageSrc: "https://gjoehandofhope.netlify.app/assets/charity-BKYlUzFk.jpg",
+      imageSrc: "./images/charity.PNG",
       description:
-        "Travel and tourism landing page showcasing the beauty of Kenya's wildlife and landscapes.",
+        "Charity organization showcasing the work they're doing in the community.",
       url: "https://gjoehandofhope.netlify.app/",
       tags: ["React.js", "JavaScript", "Tailwind"],
     },
@@ -52,10 +52,10 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "Portfolio",
-      imageSrc: "./images/v1.PNG",
+      title: "GP Climate Solutions",
+      imageSrc: "./images/climate.PNG",
       description:
-        "Portfolio to show case completed and ongoing projects built with latest web technologies.",
+        "Website  showcasing a climate change non-profit events and work in the  community .",
       url: "https://muciraerick.netlify.app",
       tags: ["React.js", "JavaScript", "Tailwind"],
     },
