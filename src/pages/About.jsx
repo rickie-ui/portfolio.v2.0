@@ -38,7 +38,7 @@ const About = () => {
         <p>- Skills</p>
         <GoArrowUpRight />
       </h2>
-      <section className="mx-auto my-10 grid w-full grid-cols-3 gap-4 overflow-x-auto p-5 lg:my-0 lg:flex lg:w-3/4 lg:gap-8">
+      <section className="mx-auto my-10 grid w-full grid-cols-3 gap-4 overflow-x-auto p-5 md:flex-wrap lg:my-0 lg:flex lg:w-3/4 lg:gap-8">
         <div>
           <img
             src="./images/tailwindcss.png"
