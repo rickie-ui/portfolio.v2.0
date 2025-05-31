@@ -61,6 +61,38 @@ const About = () => {
         </div>
         <div>
           <img
+            src="./images/next.png"
+            alt="nextjs"
+            className="h-14 w-14"
+          />
+          <p>Next.js</p>
+        </div>
+        <div>
+          <img
+            src="./images/laravel.png"
+            alt="laravel"
+            className="h-14 w-14"
+          />
+          <p>Laravel</p>
+        </div>
+        <div>
+          <img
+            src="./images/php.png"
+            alt="php"
+            className="h-14 w-14"
+          />
+          <p>Php</p>
+        </div>
+        <div>
+          <img
+            src="./images/msql.png"
+            alt="mysql"
+            className="h-14 w-14"
+          />
+          <p>MySql</p>
+        </div>
+        <div>
+          <img
             src="./images/javascript.png"
             alt="javascript"
             className="h-14 w-14"
